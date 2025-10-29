@@ -1,10 +1,10 @@
 # --- JARVIS AI Assistant ---
-from stt import speak, engine
-from sr import take_command
-from LLM import get_llm_response
-from dateandtime import get_datetime
-from system_info import get_battery_status, get_cpu_usage, get_memory_usage
-from ope_function import open_application , open_website 
+from module import speak, engine
+from module import take_command
+from module import get_llm_response
+from module import get_datetime
+from module import get_battery_status, get_cpu_usage, get_memory_usage
+from module import open_application , open_website 
 
 def main():
     """Main program loop"""
