@@ -1,55 +1,105 @@
-Jarvis AI Assistant
+# 🤖 Jarvis AI Assistant
 
-A personal AI-powered desktop assistant built with Python. Jarvis automates common system tasks, opens websites and applications, provides real-time system information, and intelligently answers user queries using a built-in LLM (Gemini 2.5 Flash) — all through natural voice interaction.
+A personal **AI-powered desktop assistant** built with **Python**.  
+Jarvis automates system tasks, opens websites and applications, provides real-time system stats, and answers queries using **Gemini 2.5 Flash LLM** — all through **natural voice interaction**.
 
-Project Overview
+---
 
-Jarvis is designed as a modular, extensible, and intelligent personal assistant.
-It can perform day-to-day operations such as opening system applications, browsing websites, and retrieving information using a conversational interface.
-The system integrates speech recognition, text-to-speech synthesis, and a large language model to create a seamless user experience.
+## 🧭 Project Overview
 
-Key Features
+Jarvis is a **modular**, **extensible**, and **intelligent** voice-based assistant designed for desktop environments.  
+It performs day-to-day tasks such as:
 
-Smart Task Automation
+- Opening apps and websites  
+- Retrieving system information  
+- Providing intelligent responses using Gemini LLM  
+- Interacting through speech input and output  
 
-Opens websites (e.g., YouTube, Google, Wikipedia).
-Launches system applications (e.g., Notepad, Calculator, Command Prompt).
+Each component (speech, AI, system utilities, automation) is designed as a **separate Python module**, ensuring clarity and scalability.
 
-AI Query Handling (Gemini 2.5 Flash)
+---
 
-Integrates the Gemini 2.5 Flash LLM for intelligent query answering.
+## ⚙️ Key Features
 
-Provides fast, context-aware responses through text or voice.
+### 🧠 Smart Task Automation
+- Opens popular websites like **YouTube**, **Google**, **Wikipedia**
+- Launches system applications such as **Notepad**, **Calculator**, **Command Prompt**
+- Uses Python’s built-in modules for OS-level automation
 
-Voice Interaction
+### 💬 AI Query Handling (Gemini 2.5 Flash)
+- Integrated **Google Gemini 2.5 Flash LLM**
+- Handles general and technical questions intelligently
+- Provides **fast**, **context-aware**, and **natural responses**
 
-Utilizes pyttsx3 for text-to-speech output.
+### 🗣️ Voice Interaction
+- **Speech-to-Text:** via `speech_recognition`  
+- **Text-to-Speech:** via `pyttsx3`  
+- Fully hands-free experience with natural speech synthesis
 
-Configured for a natural-sounding male voice.
+### 🧩 System Information Monitoring
+- Displays real-time **CPU**, **RAM**, and **battery** stats  
+- Uses `psutil` for precise system metrics
 
-System Information Monitoring
+### 🧱 Modular Architecture
+- Every functionality is a **separate module**:
+  - `stt.py` → Speech to Text  
+  - `LLM.py` → Large Language Model integration  
+  - `system_info.py` → System stats  
+  - `ope_function.py` → Task automation  
+  - `dateandtime.py` → Date and time utilities  
+- Makes the code easy to read, maintain, and extend.
 
-Displays battery percentage, CPU usage, and memory statistics using the psutil module.
+---
 
-Modular Architecture
+## 🧰 Technology Stack
 
-Each function (e.g., speech input, voice output, task automation, LLM interaction, system utilities) is developed as a separate module.
+| Component | Library / Tool | Description |
+|------------|----------------|-------------|
+| **Voice Input** | `speech_recognition` | Captures and converts spoken commands into text |
+| **Voice Output** | `pyttsx3` | Generates natural voice responses (offline TTS) |
+| **AI Model** | `google.genai` (Gemini 2.5 Flash) | Handles intelligent and conversational responses |
+| **System Operations** | `os`, `subprocess`, `psutil`, `webbrowser` | Automates applications and retrieves system info |
+| **Architecture** | Custom Python Modules | Ensures modular, scalable design |
 
-Enhances readability, maintainability, and scalability.
+---
 
-Technology Stack
-Component	Library / Tool	Description
-Voice Input	speech_recognition	Captures and processes spoken commands
-Voice Output	pyttsx3	Generates speech output with customizable voices
-AI Model	google.genai (Gemini 2.5 Flash)	Handles complex queries and conversational responses
-System Operations	os, subprocess, psutil, webbrowser	Manages app and website control
-Modular Design	Python Packages	Enables structured and maintainable codebase
-Future Enhancements
+## 🧠 Why These Libraries?
 
-Add GUI dashboard for visual interaction.
+- **speech_recognition:** Accurate speech input handling  
+- **pyttsx3:** Offline text-to-speech with customizable voices  
+- **psutil:** System monitoring (battery, CPU, RAM)  
+- **os & subprocess:** Core automation for apps and system commands  
+- **webbrowser:** Quick and lightweight URL launching  
+- **google.genai:** Integrates Gemini LLM for intelligent query responses  
 
-Integrate OpenCV for facial recognition and emotion detection.
+---
 
-Extend LLM capabilities for context retention and personalized responses.
+## 🚀 Future Enhancements
 
-Include task scheduling and notification system.
+- 🪟 Add **GUI dashboard** for visual interaction  
+- 👁️ Integrate **OpenCV** for facial recognition & emotion detection  
+- 🧠 Improve **context retention** for personalized responses  
+- ⏰ Add **task scheduling** and **reminder system**  
+- 💬 Multi-language voice support  
+
+---
+
+## 🪄 Example Command Flow
+
+**User:** “Jarvis, open YouTube”  
+**Jarvis:** *(launches browser and responds with voice)* “Opening YouTube, sir.”  
+
+**User:** “What’s my CPU usage?”  
+**Jarvis:** “Your CPU is currently running at 43 percent.”  
+
+**User:** “Tell me about black holes.”  
+**Jarvis:** *(Gemini LLM responds with natural explanation)*  
+
+---
+
+## 🧑‍💻 Setup & Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Jarvis-AI-Assistant.git
+   cd Jarvis-AI-Assistant
